@@ -8,13 +8,11 @@ def solution(want, number, discount):
     for i in range(len(want)):
         goal[want[i]] = number[i]
     
-    # print(goal)
     for i in range(len(discount)):
         product = Counter(discount[i:min(i+10, len(discount))])
         flag = 1
         for key in goal.keys():
             if (key not in product) or (product[key] < goal[key]):
-                # print(product, key)
                 flag = 0
                 break
         
