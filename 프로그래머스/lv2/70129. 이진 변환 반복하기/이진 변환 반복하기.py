@@ -13,9 +13,6 @@ def binary(s):
 def solution(s):
     answer = [0, 0]
     
-    answer[0] += 1
-    answer[1], s = binary(s)
-    
     while s != "1":
         zero, s = binary(s)
         answer[0] += 1
